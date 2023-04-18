@@ -9,7 +9,7 @@ const CostList = (props) => {
     В этом году расходов нет
     </h2>
   }
-  return <ul className="cost-list">
+  return (<ul className="cost-list">
     {props.costs.map((cost) => (
       <CostItem
         key={cost.id}
@@ -17,8 +17,9 @@ const CostList = (props) => {
         description={cost.description}
         amount={cost.amount}
       />
-    ))};
-  </ul>;
+    ))}
+  </ul>
+  );
 };
 
 export default CostList;
